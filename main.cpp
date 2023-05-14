@@ -18,6 +18,8 @@ private:
   double real_;
   double ima_;
 
+  static constexpr bool LOG { true };
+
 public:
   complexx(double a = 2.0, double b = 3.0)
   : real_ { a }, ima_ { b } {
