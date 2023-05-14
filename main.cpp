@@ -82,13 +82,6 @@ public:
     return temp;
   }
 
-  // complexx operator+(complexx const & that) const {
-  //     complexx temp;
-  //     temp.real_ = real_ + that.real_;
-  //     temp.ima_ = ima_ + that.ima_;
-  //     return temp;
-  // }
-
   complexx & operator+=(complexx const & that) {
     if (LOG) { std::clog << "complexx::" << __func__ << "()\n"; }
     real_ += that.real_;
@@ -169,25 +162,6 @@ public:
 
 //  MARK: - Implementation
 //..+....|....+....|....+....|....+....|....+....|....+....|....+....|
-//  MARK: operator+() - Helper function
-// complexx operator+(complexx const & lft, complexx const & rgt) {
-//     if (LOG) { std::clog << __func__ << "(complexx,complexx)\n"; }
-//     complexx temp;
-//     temp.real(lft.real() + rgt.real());
-//     temp.ima(lft.ima() + rgt.ima());
-//     return temp;
-// }
-
-//  MARK: operator-() - Helper function
-// complexx operator-(complexx const & lft, complexx const & rgt) {
-//     if (LOG) { std::clog << __func__ << "(complexx,complexx)\n"; }
-//     complexx temp;
-//     temp.real(lft.real() - rgt.real());
-//     temp.ima(lft.ima() - rgt.ima());
-//     return temp;
-// }
-
-//..+....|....+....|....+....|....+....|....+....|....+....|....+....|
 //  MARK: main()
 int main(int argc, char const * argv[]) {
   std::string dlm = "A: ....+....|....+....|....+....|....+....|....+....|";
@@ -200,8 +174,6 @@ int main(int argc, char const * argv[]) {
             << "}}} p2 " << p2 << ";\n"
             << "}}} p3 " << p3 << ";\n";
 
-//    p1.rdcmplx();
-//    p2.rdcmplx();
   dlm = "B: ....+....|....+....|....+....|....+....|....+....|";
   std::cout << dlm << '\n';
   if (LOG) { std::clog << dlm << '\n'; }
