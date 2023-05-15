@@ -36,9 +36,9 @@ The class is a simple implementation of a complex number which holds the real an
 ### Accessors  & Mutators *(Getters & Setters)*
 
 * `double real(void)` ***inline method*** - accessor for the real part of the complex number. Gets the contents of the `real_` member data.
-* `double real(double)` ***inline method*** - mutator for the real part of the complex number. Gets the contents of the `ima_` member data.<br/>(**NOTE:** returns a copy of the member data).
+* `double real(double)` ***inline method*** - mutator for the real part of the complex number. Sets the contents of the `ima_` member data.<br/>(**NOTE:** returns a copy of the member data).
 * `double ima(void)` ***inline method*** - accessor for the imaginary part of the complex number. Gets the contents of the `real_` member data.
-* `double ima(double)` ***inline method*** - mutator for the imaginary part of the complex number. Gets the contents of the `ima_` member data.<br/>(**NOTE:** returns a copy of the member data).
+* `double ima(double)` ***inline method*** - mutator for the imaginary part of the complex number. Sets the contents of the `ima_` member data.<br/>(**NOTE:** returns a copy of the member data).
 
 ### Deprecated Member Methods
 
