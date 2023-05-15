@@ -16,6 +16,7 @@ static constexpr bool KLOG { true };
 //..+....|....+....|....+....|....+....|....+....|....+....|....+....|
 //  MARK: main()
 int main(int argc, char const * argv[]) {
+  //  Create test data
   std::string dlm = "A: ....+....|....+....|....+....|....+....|....+....|";
   std::cout << dlm << '\n';
   if (KLOG) { std::clog << dlm << '\n'; }
@@ -26,6 +27,7 @@ int main(int argc, char const * argv[]) {
             << "}}} p2 " << p2 << ";\n"
             << "}}} p3 " << p3 << ";\n";
 
+  //  Test sum() method
   dlm = "B: ....+....|....+....|....+....|....+....|....+....|";
   std::cout << dlm << '\n';
   if (KLOG) { std::clog << dlm << '\n'; }
@@ -37,6 +39,7 @@ int main(int argc, char const * argv[]) {
             << "}}} p2 " << p2 << ";\n"
             << "}}} p3 " << p3 << ";\n";
 
+  //  Test add() method
   dlm = "C: ....+....|....+....|....+....|....+....|....+....|";
   std::cout << dlm << '\n';
   if (KLOG) { std::clog << dlm << '\n'; }
@@ -49,6 +52,7 @@ int main(int argc, char const * argv[]) {
             << "}}} p2 " << p2 << ";\n"
             << "}}} p3 " << p3 << ";\n";
 
+  //  Test operator+() method
   dlm = "D: ....+....|....+....|....+....|....+....|....+....|";
   std::cout << dlm << '\n';
   if (KLOG) { std::clog << dlm << '\n'; }
@@ -60,6 +64,7 @@ int main(int argc, char const * argv[]) {
             << "}}} p3 " << p3 << ";\n"
             << "}}} p3 " << (p3 = p1 + p2) << ";\n";
 
+  //  Test operator+=() method
   dlm = "E: ....+....|....+....|....+....|....+....|....+....|";
   std::cout << dlm << '\n';
   if (KLOG) { std::clog << dlm << '\n'; }
@@ -71,7 +76,8 @@ int main(int argc, char const * argv[]) {
             << "}}} p3 " << p3 << ";\n"
             << "}}} p3 " << (p3 += p2) << ";\n";
 
-  dlm = "F: ....+....|....+....|....+....|....+....|....+....|";
+   //  Test operator-() method
+ dlm = "F: ....+....|....+....|....+....|....+....|....+....|";
   std::cout << dlm << '\n';
   if (KLOG) { std::clog << dlm << '\n'; }
   std::cout << "(p3 = p1 - p2)\n";
@@ -82,7 +88,8 @@ int main(int argc, char const * argv[]) {
             << "}}} p3 " << p3 << ";\n"
             << "}}} p3 " << (p3 = p1 - p2) << ";\n";
 
-  dlm = "G: ....+....|....+....|....+....|....+....|....+....|";
+   //  Test operator+=() method
+ dlm = "G: ....+....|....+....|....+....|....+....|....+....|";
   std::cout << dlm << '\n';
   if (KLOG) { std::clog << dlm << '\n'; }
   std::cout << "(p3 -= p2)\n";
@@ -93,6 +100,7 @@ int main(int argc, char const * argv[]) {
             << "}}} p3 " << p3 << ";\n"
             << "}}} p3 " << (p3 -= p2) << ";\n";
 
+  //  Test operator+() & operator-() methods
   dlm = "H: ....+....|....+....|....+....|....+....|....+....|";
   std::cout << dlm << '\n';
   if (KLOG) { std::clog << dlm << '\n'; }
@@ -106,6 +114,7 @@ int main(int argc, char const * argv[]) {
 
   #ifdef INTERACTIVE
   {
+    //  Test real() & ima() methods
     dlm = "I: ....+....|....+....|....+....|....+....|....+....|";
     std::cout << dlm << '\n';
     if (KLOG) { std::clog << dlm << '\n'; }
@@ -125,6 +134,7 @@ int main(int argc, char const * argv[]) {
 
 #ifdef INTERACTIVE
   {
+    //  Test operator>>() method
     dlm = "J: ....+....|....+....|....+....|....+....|....+....|";
     std::cout << dlm << '\n';
     if (KLOG) { std::clog << dlm << '\n'; }

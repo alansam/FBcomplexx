@@ -59,10 +59,14 @@ public:
     if (LOG) { std::clog << "complexx::" << __func__ << "() d'tor [@" << std::hex << this << std::dec << "]\n"; }
   }
 
+  [[deprecated("use operator>>() instead")]]
   void rdcmplx(void);
+  [[deprecated("use operator<<() instead")]]
   void wrcmplx(void);
 
+  [[deprecated("use operator+() instead")]]
   complexx sum(complexx x, complexx y) const;
+  [[deprecated("use operator+=() instead")]]
   complexx add(complexx const & that);
 
   complexx & operator+=(complexx const & that);
