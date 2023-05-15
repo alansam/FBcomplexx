@@ -33,7 +33,8 @@ public:
                 << std::hex
                 << this << ", @" << &that
                 << std::dec
-                << "]\n"; }
+                << "]\n";
+    }
   }
   complexx(complexx const && that)
   : real_ { std::move(that.real_) }, ima_ { std::move(that.ima_) } {
@@ -56,7 +57,12 @@ public:
   virtual
 #endif
   ~complexx() {
-    if (LOG) { std::clog << "complexx::" << __func__ << "() d'tor [@" << std::hex << this << std::dec << "]\n"; }
+    if (LOG) {
+      std::clog << "complexx::" << __func__
+                << "() d'tor [@"
+                << std::hex << this << std::dec
+                << "]\n";
+    }
   }
 
   [[deprecated("use operator>>() instead")]]

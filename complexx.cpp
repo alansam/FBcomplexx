@@ -11,7 +11,7 @@ complexx & complexx::operator=(complexx const & that) {
               << this << ", @" << &that
               << std::dec
               << "]\n";
-          }
+  }
   real_ += that.real_;
   ima_ += that.ima_;
   return *this;
@@ -25,7 +25,7 @@ complexx & complexx::operator=(complexx && that) {
               << this << ", @" << &that
               << std::dec
               << "]\n";
-          }
+  }
   real_ = std::move(that.real_);
   ima_ = std::move(that.ima_);
   return *this;
@@ -78,7 +78,7 @@ complexx complexx::add(complexx const & that) {
               << this << ", @" << &that
               << std::dec
               << "]\n";
-          }
+  }
   complexx temp;
   temp.real_ = real_ + that.real_;
   temp.ima_ = ima_ + that.ima_;
@@ -94,7 +94,7 @@ complexx & complexx::operator+=(complexx const & that) {
               << this << ", @" << &that
               << std::dec
               << "]\n";
-          }
+  }
   real_ += that.real_;
   ima_ += that.ima_;
   return *this;
@@ -109,7 +109,7 @@ complexx & complexx::operator-=(complexx const & that) {
               << this << ", @" << &that
               << std::dec
               << "]\n";
-          }
+  }
   real_ -= that.real_;
   ima_ -= that.ima_;
   return *this;
@@ -140,7 +140,7 @@ complexx operator-(complexx const & lft, complexx const & rgt) {
               << &lft << ", @" << &rgt
               << std::dec
               << "]\n";
-          }
+  }
   complexx temp;
   temp.real_ = lft.real_ - rgt.real_;
   temp.ima_ = lft.ima_ - rgt.ima_;
@@ -181,7 +181,7 @@ std::istream & operator>>(std::istream & in, complexx & that) {
               << &that
               << std::dec
               << "]\n";
-          }
+  }
   std::cin >> that.real_ >> that.ima_;
   return in;
 }
